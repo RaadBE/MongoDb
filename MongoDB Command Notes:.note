@@ -1,0 +1,60 @@
+Command:
+db.collection_name.insert({ key: value });
+
+Note:
+This command is used to insert a new document into the specified collection. 
+- "db" refers to the current database.
+- "collection_name" is the name of the collection you want to insert into.
+- "{ key: value }" represents the JSON-like document that you want to insert.
+
+Usage:
+To insert a user with a name of "John" into the "users" collection, you would use:
+db.users.insert({ name: "John" });
+
+Command: show dbs
+
+Note: Displays all the databases in your MongoDB server.
+
+Usage: Simply type show dbs in the MongoDB shell.
+======================================================================
+
+Command: use database_name
+
+Note: Switches to the specified database. If the database does not exist, MongoDB will create it once you add data.
+
+Usage: To switch to or create a database named "sampleDB", you would type use sampleDB.
+===============================================================================
+
+Command: db.collection_name.insert({ key: value })
+
+Note: Inserts a new document into the specified collection. "db" refers to the current database. "collection_name" is the name of the collection you want to insert into. "{ key: value }" represents the document you want to insert.
+
+Usage: To insert a user with a name of "John" into the "users" collection, type db.users.insert({ name: "John" }).
+
+
+Command: db.collection_name.find({ key: value })
+
+Note: Queries documents in a collection. "{ key: value }" is the query criteria.
+
+Usage: To find all users with the name "John" in the "users" collection, type db.users.find({ name: "John" }).
+
+
+Command: db.collection_name.update({ query_key: value }, { $set: { update_key: update_value } })
+
+Note: Updates documents in a collection. "{ query_key: value }" specifies which documents to update. "{ $set: { update_key: update_value } }" dictates the changes.
+
+Usage: To change the name of a user with the username "jdoe" to "John Doe", type db.users.update({ username: "jdoe" }, { $set: { name: "John Doe" } }).
+
+Command: db.collection_name.remove({ key: value })
+
+Note: Deletes documents from a collection. "{ key: value }" specifies which documents to delete.
+
+Usage: To delete a user with the name "John" from the "users" collection, type db.users.remove({ name: "John" }).
+
+Command: db.collection_name.createIndex({ key: 1 })
+
+Note: Creates an index on the specified field(s) of a collection. "{ key: 1 }" indicates creating an ascending index on the key.
+
+Usage: To create an ascending index on the "email" field in the "users" collection, type db.users.createIndex({ email: 1 }).
+
+

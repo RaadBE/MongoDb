@@ -1,0 +1,34 @@
+MongoDB Command Notes:
+General:
+Start MongoDB server: mongod
+Connect to MongoDB: mongo
+Databases:
+List databases: show dbs
+Switch (or create if doesn't exist) to a database: use [database_name]
+Drop current database: db.dropDatabase()
+Collections:
+List collections in current database: show collections
+Create collection: db.createCollection("[collection_name]")
+Drop collection: db.[collection_name].drop()
+CRUD Operations:
+Insert a document: db.[collection_name].insert({ key1: "value1", key2: "value2" })
+Insert multiple documents: db.[collection_name].insertMany([{ key1: "value1_1", key2: "value2_1" }, { key1: "value1_2", key2: "value2_2" }])
+Find all documents: db.[collection_name].find()
+Find specific documents: db.[collection_name].find({ key: "value" })
+Find with projection: db.[collection_name].find({}, { key1: 1, key2: 1 })
+Update a document: db.[collection_name].update({ key: "value" }, { $set: { key_to_update: "new_value" } })
+Delete a document: db.[collection_name].remove({ key: "value" })
+Indexes:
+Create an index: db.[collection_name].createIndex({ key: 1 })
+List indexes for a collection: db.[collection_name].getIndexes()
+Drop an index: db.[collection_name].dropIndex("index_name")
+Aggregation:
+Basic aggregation pipeline: db.[collection_name].aggregate([{ $match: { key: "value" } }, { $group: { _id: "$key_to_group_by", count: { $sum: 1 } } }])
+Utilities:
+Show current database: db
+Get collection stats: db.[collection_name].stats()
+Explain query execution: db.[collection_name].find().explain()
+Backup & Restore:
+Backup: mongodump --out [directory_path]
+Restore: mongorestore [directory_path]
+Feel free to copy and adjust this list as needed for your note editor!
