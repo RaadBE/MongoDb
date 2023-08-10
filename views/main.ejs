@@ -4,10 +4,26 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Players</title>
+		<link rel="stylesheet" href="/tailwind.css">
 </head>
-<body>
+<body >
+<div class="">
+  <div class="flex flex-wrap">
+    <% results.forEach(function(player) { %>
+        <div class="object-fill h-48 w-24">
+                        <% if (player.playerSrc) { %>
+    <img src= "<%- player.playerSrc %>" alt="<%= player.name %>" class="shadow rounded-full max-w-full h-auto align-middle border-none" />
 
+            <% } else { %>
+                <p>No Image Available</p>
+            <% } %>
+            <h2><%= player.name %></h2> <!-- Display player name -->
 
-	
+        </div>
+    <% }); %>
+</div>
+
+</div>
+	</div>
 </body>
 </html>

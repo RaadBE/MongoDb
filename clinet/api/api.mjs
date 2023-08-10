@@ -33,16 +33,17 @@ const client = new MongoClient(uri, {
         res.json(data);
         });
 
+// app.get('/test', (req, res) => {
+// });
 
-router.get("/latest", async (req, res) => {
+router.get("/test", async (req, res) => {
   let collection = await db.collection("players");
   let results = await collection.aggregate([
-    {"$project": {"name": 1}},
+    {"$project": {"name": 1, "playerSrc": 1}},
     {"$sort": {"date": 1}},
-    {"$limit": 3}
+    {"$limit": 600}
   ]).toArray();
-  res.json(results);
-
+     res.render('main', {results});
 });
 
 export default router;
