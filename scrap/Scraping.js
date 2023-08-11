@@ -1,11 +1,14 @@
 const puppeteer = require('puppeteer');
+const dotenv = require('dotenv');
+dotenv.config();
 const fs = require('fs');
 
 const { MongoClient, ServerApiVersion } = require('mongodb');
 
 
 (async () => {
-const uri = "mongodb+srv://raadsn11:T1EiV9dxF2Nrt84E@players.by7ln3k.mongodb.net/?retryWrites=true&w=majority";
+const uri = process.env.dataKey;
+console.log(process.env.dataKey);
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
