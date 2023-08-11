@@ -10,3 +10,45 @@ body{
 .extra {
   overflow: scroll;
 }
+.playerCard{
+      visibility: visible;
+    display: flex;
+    width: 600px;
+    height: 252px;
+        background-color: #ac4141;
+    justify-content: space-around;
+}
+
+.righ-side{
+         display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-content: stretch;
+    align-items: baseline;
+    height: 100%;
+    flex-direction: column;
+}.bottom{
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+    justify-content: space-around;
+    align-content: stretch;
+    flex-wrap: nowrap;
+}
+.imgs{
+    display: flex;
+    align-content: stretch;
+    /* flex-grow: 0.9; */
+    align-self: normal;
+    gap: ga;
+    /* align-content: stretch; */
+    /* height: 64px; */
+    width: 100%;
+    justify-content: space-around;
+    flex-direction: row;
+  }.left-side{
+    flex-shrink: 1;
+  }
+  .imgs img {
+    width: 30px;
+  }

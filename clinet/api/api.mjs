@@ -40,10 +40,20 @@ router.get("/test", async (req, res) => {
   let collection = await db.collection("players");
   let results = await collection.aggregate([
     {"$project": {"name": 1, "playerSrc": 1}},
-    {"$sort": {"date": 1}},
-    {"$limit": 100}
+    {"$sort": {"date": -1}},
+    {"$limit": 1}
   ]).toArray();
      res.render('main', {results});
+});
+
+router.get("/all", async (req, res) => {
+  let collection = await db.collection("players");
+  let results = await collection.aggregate([
+    {"$project": {"name": 1, "playerSrc": 1}},
+    {"$sort": {"date": -1}},
+    {"$limit": 10}
+  ]).toArray();
+     res.json(results);
 });
 
 export default router;

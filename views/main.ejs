@@ -240,7 +240,7 @@
     <% results.forEach(function(player) { %>
         <div class="player object-fill h-48 w-24">
                         <% if (player.playerSrc) { %>
-    <img src= "<%- player.playerSrc %>" alt="<%= player.name %>" class="shadow rounded-full max-w-full h-auto align-middle border-none" />
+    <a href=""><img src= "<%- player.playerSrc %>" alt="<%= player.name %>" class="shadow rounded-full max-w-full h-auto align-middle border-none" /></a>
 
             <% } else { %>
                 <p>No Image Available</p>
@@ -252,6 +252,28 @@
     <% }); %>
  
 	</div>
+		<div class="cards">
+			<div style="visibility: visible;" class="playerCard">
+				<div class="left-side">
+		<a href=""><img src= "https://fifastatic.fifaindex.com/FIFA23/players/212622.png" alt=''class="shadow  max-w-full h-auto " /></a> 
+				</div>
+				<div class="righ-side">
+				<h1>Joshua Kimmich <strong>CR</strong></h1>
+				<p>central defensive midfielder</p>
+					<div class="imgs">
+											<img src="https://fifastatic.fifaindex.com/FIFA21/images/flags/2/21.png">
+											<p class="rounded-full">21</p>
+											<img src="https://fifastatic.fifaindex.com/FIFA23/teams/light/21.png">
+
+					</div>
+					<div class="bottom">
+					<p>germany</p>
+					<p>age</p>
+					<p>team</p>
+				</div>
+				</div>
+			</div>
+		</div>
                         </div>
                     </div>
                 </div>
