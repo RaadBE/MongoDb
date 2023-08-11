@@ -899,10 +899,11 @@ body{
 .playerCard{
       visibility: visible;
     display: flex;
-    width: 600px;
-    height: 252px;
-    background-color: blue;
+     width: 733px;
+    height: 349px;
+        background-color: #ac4141;
     justify-content: space-around;
+        gap: 106px;
 }
 
 .righ-side{
@@ -913,6 +914,7 @@ body{
     align-items: baseline;
     height: 100%;
     flex-direction: column;
+    width: 60%;
 }.bottom{
     display: flex;
     width: 100%;
@@ -920,6 +922,10 @@ body{
     justify-content: space-around;
     align-content: stretch;
     flex-wrap: nowrap;
+}.righ-side h1 {
+  font-size: 40px;
+}.righ-side .bottom p {
+  font-size: 30px;
 }
 .imgs{
     display: flex;
@@ -932,8 +938,12 @@ body{
     width: 100%;
     justify-content: space-around;
     flex-direction: row;
-  }.left-side{
-    flex-shrink: 1;
+  }.left-side img{
+            width: 319px;
+    padding-top: 40px;
+  }
+  .left-side{
+    width: 40%;
   }
   .imgs img {
     width: 30px;
