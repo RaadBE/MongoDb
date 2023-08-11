@@ -41,7 +41,7 @@ router.get("/test", async (req, res) => {
   let results = await collection.aggregate([
     {"$project": {"name": 1, "playerSrc": 1}},
     {"$sort": {"date": 1}},
-    {"$limit": 600}
+    {"$limit": 100}
   ]).toArray();
      res.render('main', {results});
 });
